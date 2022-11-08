@@ -36,3 +36,8 @@ Endmember fractions are not done for amphibole given the large, complicated comp
 
 <img width="800" alt="Ca-amphibole" src="https://user-images.githubusercontent.com/87534196/200581565-f742a83e-00ba-4c95-8ccb-3686b5bbd67a.png">
 
+Feldspar: Feldspar (AT4O8) is calculated by normalizing to 8 oxygen equivalents, with A = Ca, Na, K, Ba, Fe2+, Mn, and Mg, and T = Al and Si. Endmembers are calculated for anorthite (Xan = Ca/(Ca + Na + K)), albite (Xab = Ca/(Ca + Na + K)), and alkali feldspar (Xor = K/(Ca + Na + K)). Plotting is available as the classic An-Ab-Or feldspar ternary. An option for the subdivisions is available. 
+
+<img width="500" alt="feldspar" src="https://user-images.githubusercontent.com/87534196/200589611-8bfe2ecb-0b52-47da-ac68-837658a2fe3b.png">
+
+
