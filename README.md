@@ -30,14 +30,18 @@ Clinoamphibole: Amphibole (AB2C5T8O22W2) compositions are calculated following t
 
 Endmember fractions are not done for amphibole given the large, complicated composition space. The composition space explored for Na, Na-Ca, and Ca amphiboles in the composition diagrams is expressed by the following formulae:
 
-<img width="800" alt="Na-amphibole" src="https://user-images.githubusercontent.com/87534196/200581309-97fa8c89-2ace-4157-81ec-01672421462e.png">
+<img width="800" alt="Na-amphibole structural formula" src="https://user-images.githubusercontent.com/87534196/200581309-97fa8c89-2ace-4157-81ec-01672421462e.png">
 
-<img width="800" alt="NaCa-amphibole" src="https://user-images.githubusercontent.com/87534196/200581489-d4858ea2-4c97-42e0-95c4-efcdafb79bbc.png">
+<img width="800" alt="NaCa-amphibole structural formula" src="https://user-images.githubusercontent.com/87534196/200581489-d4858ea2-4c97-42e0-95c4-efcdafb79bbc.png">
 
-<img width="800" alt="Ca-amphibole" src="https://user-images.githubusercontent.com/87534196/200581565-f742a83e-00ba-4c95-8ccb-3686b5bbd67a.png">
+<img width="800" alt="Ca-amphibole structural formula" src="https://user-images.githubusercontent.com/87534196/200581565-f742a83e-00ba-4c95-8ccb-3686b5bbd67a.png">
 
 Feldspar: Feldspar (AT4O8) is calculated by normalizing to 8 oxygen equivalents, with A = Ca, Na, K, Ba, Fe2+, Mn, and Mg, and T = Al and Si. Endmembers are calculated for anorthite (Xan = Ca/(Ca + Na + K)), albite (Xab = Ca/(Ca + Na + K)), and alkali feldspar (Xor = K/(Ca + Na + K)). Plotting is available as the classic An-Ab-Or feldspar ternary. An option for the subdivisions is available. 
 
-<img width="500" alt="feldspar" src="https://user-images.githubusercontent.com/87534196/200589611-8bfe2ecb-0b52-47da-ac68-837658a2fe3b.png">
+<img width="500" alt="feldspar structural formula" src="https://user-images.githubusercontent.com/87534196/200589611-8bfe2ecb-0b52-47da-ac68-837658a2fe3b.png">
+
+Mica: Mica (IM2-3T4O10W2) is calculated normalizing to 11 oxygen equivalents. Ions are assigned as I = □, K, Na, Ca, and Ba, M = Mg, Mn, Fe2+, Cr, Ti, and VIAl, T = IVAl and Si, and W = F, Cl, and OH. For micas totalFe is assumed to be Fe2+. MinPlot also assumes a full W site (OH = 2 – F – Cl), which may not be accurate and thus provides an estimation of the maximum possibly OH content. Mica endmembers are calculated based on two compositional groups: 1. Dioctahedral muscovite (Xms), ferroceladonite (XFe-cel), magnesioceladonite (XMg-cel), paragonite (Xpg), margarite (Xmrg), and pyrophyllite (Xprl) species, or 2. Trioctahedral, phlogopite (Xphl), annite (Xann), eastonite (Xeas), and siderophyllite (Xsid) species. The total dioctahedral or trioctahedral components are given as XDiOct and XTriOct, respectively. Plots for micas include the 1. Xms, XAl-cel, and Xprl ternary diagram, 2. Celadonite and muscovite + paragonite solid solution diagram, 3. Na (APFU) vs. Si (APFU) diagram, 4. F-Cl-OH ternary , and 5. Trioctahedral Ann-Phl-Sid-East solid solution diagram.
+
+<img width="876" alt="mica structural formula" src="https://user-images.githubusercontent.com/87534196/200600143-7a5ae6c7-7d7f-40f3-900b-d624f34f83ce.png">
 
 
