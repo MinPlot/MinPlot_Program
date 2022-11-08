@@ -24,6 +24,6 @@ Plottinng and classification follows Morimoto et al. (1989), including the 'Q-J'
 
 Olivine: Olivine (M2TO4) is calculated here with M = Ca, Mg, Mn, Fe2+, Ni, Cr, Fe3+. Ti, and viAl at the octahedral site, and T = Fe2+, ivAl, and Si at the tetrahedral site. Normalization is to 3 cations and 4 oxygens in the Fe3+ estimation routine, and on a 4-oxygen basis for totalFe = Fe2+. Endmember fractions if forsterite (Xfo), fayalite (Xfa), tephroite (Xte), and calcio-olivine (XCa-ol) are calculated using the matrix inversion method. Plotting optiions are for the forsterite-fayalite binary, Xfo, XCa-ol, and Xfa + Xte ternary, and Fo number vs NiO (Wt %). 
 
-<img width="500" alt="https://user-images.githubusercontent.com/87534196/200578690-ccc6b75c-2889-4fd0-9822-248376a75076.png">
+<img width="500" alt="olivine structural formula" src="https://user-images.githubusercontent.com/87534196/200578690-ccc6b75c-2889-4fd0-9822-248376a75076.png">
 
 Clinoamphibole: Amphibole (AB2C5T8O22W2) compositions are calculated following the recommendations of Leake et al. (1997) and Hawthorne et al. (2012) for structural assignment, with A = □, K, Na, and Ca at the A site, B = Ca, Na, Mn, Fe2+, and Mg at the M4 site, C = Mn, Fe2+, Mg, Fe3+, Cr, Ti, and Al at the M1, M3, and M2 sites, T = Si and Ti at the T site, and OH-, F-, Cl-, and O2- at the W site. Ferric iron is estimated following Leake et al. (1997) and Hawthorne et al. (2012), see the manuscript for details.  
