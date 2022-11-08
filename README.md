@@ -56,5 +56,5 @@ Talc: The structural formula for talc (M3T4O10(OH)2) is normalized here to 11 ox
 
 Epidote group: Compositions of epidote group members are described as A2M3T3(O,OH,F)12, where A = K, Na, Ca, and Mg, M = Mn3+,Fe3+, Cr, Ti, and IVAl, and T = IVAl and Si. The most abundant epidote group minerals fall between the (clino-)zoisite (Ca2Al3Si3O11O(OH)) and epidote (Ca2Al2Fe3+Si3O11O(OH)) endmembers. The exchange vectors with peimontite (Ca2Al2Mn3+Si3O11O(OH)) and Cr-epidote (Ca2Al2CrSi3O11O(OH)) are also considered here. Normalization is based on a 12.5 oxygen equivalent (anhydrous) basis. Endmembers fractions are expressed as (clino-)zoisite (Xczo = (AlVI-2)/(Fe3+ + AlVI + Cr + Mn3+ - 2)), epidote (Xep = Fe3+/(Fe3+ + AlVI + Cr + Mn3+ - 2)), piemontite (Xpmt = Mn3+/(Fe3+ + AlVI + Cr + Mn3+ - 2)), and Cr-epidote (XCrep. = Cr/(Fe3+ + AlVI + Cr + Mn3+ - 2). Epidote compositions are plotted in an Al-Fe3+ binary diagram, like plots offered for olivineand chloritoid. 
 
-<img width="759" alt="epidote" src="https://user-images.githubusercontent.com/87534196/200611352-8bd642df-3974-4897-9dc3-505b7d77bbb6.png">
+<img width="400" alt="epidote" src="https://user-images.githubusercontent.com/87534196/200611352-8bd642df-3974-4897-9dc3-505b7d77bbb6.png">
 
