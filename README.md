@@ -8,7 +8,15 @@ Loading and Saving Data: MinPlot reads data stored as text (.txt) files. The fir
 
 # Mineral Plotting Options
 
-Garnet supergroup: Garnet (X3Y2Z3O12) calculates with the following site assignments: X = Na, Ca, Ca, Mg, Mn, Fe2+, and Y at the dodecahedral site, Y = Fe3+, Cr, Ti, and VIAl at the octahedral site, Z = Fe3+, IVAl, and Si at the tetrahedral site, and O2 at the anion site. Garnet structural formula are calculated using normalization to 8 cations and 12 oxygens (for Fe3+-estimation), or 12 oxygen basis alone (for totalFe=Fe2+). Endmember fractions are calculated using the matrix inversion method for solving systems of linear equations. The garnet endmembers considered are almandine (Xalm), spessartine (Xsps), grossular (Xgrs), pyrope (Xprp), andradite (Xadr), and uvarovite (Xuv). Plotting options for garnet include the Xalm + Xsps, Xgrs, and Xprp ternary.
+Garnet supergroup: Garnet (X3Y2Z3O12) calculates with the following site assignments: X = Na, Ca, Ca, Mg, Mn, Fe2+, and Y at the dodecahedral site, Y = Fe3+, Cr, Ti, and VIAl at the octahedral site, Z = Fe3+, IVAl, and Si at the tetrahedral site, and O2 at the anion site. Garnet structural formula are calculated using normalization to 8 cations and 12 oxygens (for Fe3+-estimation), or 12 oxygen basis alone (for totalFe=Fe2+). Endmember fractions are calculated using the matrix inversion method for solving systems of linear equations. The garnet endmembers considered are almandine (Xalm), spessartine (Xsps), grossular (Xgrs), pyrope (Xprp), andradite (Xadr), and uvarovite (Xuv). Plotting options for garnet include the Xalm + Xsps, Xgrs, and Xprp ternary. A second Fe3+, Cr, and VIAl ternary diagram for substitutions at the octahedral site is also available.
 
 <img width="500" alt="Garnet structural formula" src="https://user-images.githubusercontent.com/87534196/200539587-0a5b4360-f02f-4920-89a0-22ae3ba148d6.png">
+
+Pyroxene: Pyroxene (M2M1T2O6) compositions are calculated following Morimoto et al. (1989), with K, Na, Ca, Fe2+, and Mg at the distorted octahedral M2 site, Fe2+, Mg, Mn, Cr, Fe3+, Ti, and VIAl at the octahedral M1 site, and Fe3+, IVAl, and Si at the tetrahedral site. Normalization is to 4 cations and 6 oxygens in the Fe3+-estimation routine, and on a 6-oxygen basis for totalFe=Fe2+. Endmember fractions are calculated using the matrix inversion method for wollastonite (Xwo), ferrosillite (Xfs), enstatite (Xen), jadeite (Xjd), aegirine (Xaeg), and kosmochlore (Xkos).
+
+<img width="500" alt="pyroxene structural formula" src="https://user-images.githubusercontent.com/87534196/200545156-541d84d0-1006-4928-85df-e16bf07e6770.png">
+
+A second endmember calculation option is available following Harlow (1999) where endmembers are calculated as jadeite (Xjd), aegirine (Xaeg), diopside + hedenbergite (Xdi+hd), calcium-Tschermaks pyroxene (Xcats), kosmochlor (Xkos), K-kosmochlor (XK-kos), K-jadeite (XK-jd), calcium-Eskola pyroxene (Xcaes), and enstatite (Xen).
+
+<img width="500" alt="pyroxene structural formula" src="https://user-images.githubusercontent.com/87534196/200545427-5df23652-d60a-4342-a3bc-584b9b8f5b02.png">
 
