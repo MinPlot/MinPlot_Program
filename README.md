@@ -10,5 +10,5 @@ Loading and Saving Data: MinPlot reads data stored as text (.txt) files. The fir
 
 Garnet supergroup: Garnet (X3Y2Z3O12) calculates with the following site assignments: X = Na, Ca, Ca, Mg, Mn, Fe2+, and Y at the dodecahedral site, Y = Fe3+, Cr, Ti, and VIAl at the octahedral site, Z = Fe3+, IVAl, and Si at the tetrahedral site, and O2 at the anion site. Garnet structural formula are calculated using normalization to 8 cations and 12 oxygens (for Fe3+-estimation), or 12 oxygen basis alone (for totalFe=Fe2+). Endmember fractions are calculated using the matrix inversion method for solving systems of linear equations. The garnet endmembers considered are almandine (Xalm), spessartine (Xsps), grossular (Xgrs), pyrope (Xprp), andradite (Xadr), and uvarovite (Xuv). Plotting options for garnet include the Xalm + Xsps, Xgrs, and Xprp ternary.
 
-<img width="300" alt="Garnet structural formula" src="https://user-images.githubusercontent.com/87534196/200539587-0a5b4360-f02f-4920-89a0-22ae3ba148d6.png">
+<img width="500" alt="Garnet structural formula" src="https://user-images.githubusercontent.com/87534196/200539587-0a5b4360-f02f-4920-89a0-22ae3ba148d6.png">
 
