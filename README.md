@@ -30,4 +30,4 @@ Clinoamphibole: Amphibole (AB2C5T8O22W2) compositions are calculated following t
 
 Endmember fractions are not done for amphibole given the large, complicated composition space. The composition space explored for Na, Na-Ca, and Ca amphiboles in the composition diagrams is expressed by the following formulae:
 
-<img width="500" alt="Na-amphibole" src="https://user-images.githubusercontent.com/87534196/200581309-97fa8c89-2ace-4157-81ec-01672421462e.png">
+<img width="700" alt="Na-amphibole" src="https://user-images.githubusercontent.com/87534196/200581309-97fa8c89-2ace-4157-81ec-01672421462e.png">
