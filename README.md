@@ -45,3 +45,11 @@ Mica: Mica (IM2-3T4O10W2) is calculated normalizing to 11 oxygen equivalents. Io
 <img width="700" alt="mica structural formula" src="https://user-images.githubusercontent.com/87534196/200600143-7a5ae6c7-7d7f-40f3-900b-d624f34f83ce.png">
 
 Staurolite: Staurolite (A4B4C18D4T8O40X8) exhibits a complex formula with vacancies on multiple sites: A = Fe2+, Mg, and □, Fe2+, B = Zn, Co, Mg, Li, Al, Fe3+,Mn, and □, C = Al, Fe3+, Cr, V, Mg, and Ti, D = Al, Mg, and □, T = Si and Al, and X = OH, Cl, F, and O2- (Hawthorne et al., 1993). the composition space in MinPlot following formula recalculation is restricted to Li, Mg, Mn, Zn, Fe2+, Fe3+, Al, Ti, and Si. The user may select a ratio for Fe3+/totalFe before normalization. The values of 0.035 for ilmenite-bearing rocks (Xhem < 0.10) and 0.070 for hematite-ilmenite rocks (Xhem > 0.10) following Holdaway et al. (1991) are recommended. Normalization is conducted in two ways, 1. Assuming Si + Al = 25.53 APFU following Holdaway et al. (1991) and 2. Normalization to 48 oxygen equivalents. The total number of vacancies is then calculated as vac = 30 - cation total (Holdaway et al., 1991). Endmember calculation and plotting options are not currently available.
+
+Cordierite: Cordierite (A0-1B2T23T16O18) is calculated here normalized to 18 moles of oxygen equivalents. Cations are assigned as A = Ca, Na, and K, B = Fe2+, Mn, and Mg, T2 = Al and Ti, and T1 = Si and Al. The fraction of magnesium (XMg) is calculated as Mg/(Mg+Fe). 
+
+Chlorite: Chlorite (M6T4O10(OH)8) is normalized to 14 oxygen equivalents. Cations are assigned as M = Mg, Mn, Fe2+, Ni, Ti, and VIAl at the octahedral site, whereas T = IVAl and Si at the tetrahedral site. Ferric iron is not considered. Vacancies on M1 are calculated as (viAl - ivAl)/2 following Lanari et al. (2014). Chlorite compositions are plotted in a diagram of VIAl vs XMg, which explores the compositional space between the clinochlore, chamosite, and sudoite endmembers.
+
+
+
+
