@@ -136,7 +136,6 @@ else
     MC(:,13)=data(:,I(1,13))./W(:,13); %for Cl
 end 
 
-
 %% Moles of O2 units
 O2(:,1)=MC(:,1).*2; %SiO2
 O2(:,2)=MC(:,2).*2; %TiO2
@@ -154,10 +153,45 @@ O2(:,13)=MC(:,13); %Cl
 
 O2_Sum=sum(O2(:,1:13),2)-0.5.*(O2(:,12)+O2(:,13)); %sum of O2, including F and Cl
 
-O2_N=(11)./O2_Sum; %normalization factor
+O2_N=(12)./O2_Sum; %normalization factor
 
 %normalized moles of anions
 N_Ox=O2.*O2_N;
+
+%% Iterate OH
+
+%initial oxygens of OH
+Hin=2-(N_Ox(:,12)+N_Ox(:,13)); %H = 2 - (F+Cl)
+O_OH=(0.5.*Hin)./O2_N; %oxygen moles of H2O
+H2Oi=O_OH.*18.015; %initial H2O wt %
+
+for z=1:50
+    O2(:,1)=MC(:,1).*2; %SiO2
+    O2(:,2)=MC(:,2).*2; %TiO2
+    O2(:,3)=MC(:,3).*3; %Al2O3
+    O2(:,4)=MC(:,4).*3; %Cr2O3
+    O2(:,5)=MC(:,5); %FeO
+    O2(:,6)=MC(:,6); %MnO
+    O2(:,7)=MC(:,7); %MgO
+    O2(:,8)=MC(:,8); %CaO
+    O2(:,9)=MC(:,9); %Na2O
+    O2(:,10)=MC(:,10); %K2O
+    O2(:,11)=MC(:,11); %BaO
+    O2(:,12)=MC(:,12); %F
+    O2(:,13)=MC(:,13); %Cl
+    O2(:,14)=O_OH; %H2O
+
+    O2_Sum=sum(O2(:,1:14),2)-0.5.*(O2(:,12)+O2(:,13)); %sum of O2, including F and Cl
+
+    O2_N=(12)./O2_Sum; %normalization factor
+
+    %normalized moles of anions
+    N_Ox=O2.*O2_N;
+
+    Hin=2-(N_Ox(:,12)+N_Ox(:,13)); %H = 4 - (F+Cl)
+    O_OH=(0.5.*Hin)./O2_N; %oxygen moles of H2O
+    H2Oi=O_OH.*18.015; %initial H2O wt %
+end
 
 %% atoms pfu
 
@@ -174,7 +208,8 @@ APFU(:,10)=N_Ox(:,10).*2; %K
 APFU(:,11)=N_Ox(:,11); %Ba
 APFU(:,12)=N_Ox(:,12); %F
 APFU(:,13)=N_Ox(:,13); %Cl
-APFU(:,14)=sum(APFU,2); %calculations the total
+APFU(:,14)=N_Ox(:,14).*2; %OH
+APFU(:,15)=sum(APFU,2); %calculations the total
 
 %% Structural Formula
 
@@ -209,7 +244,7 @@ StrctFrm(:,15)=sum(StrctFrm(:,11:1:14),2)+StrctFrm(:,10)+StrctFrm(:,3); %cation 
 
 StrctFrm(:,16)=APFU(:,12); % F (A)
 StrctFrm(:,17)=APFU(:,13); % Cl (A)
-StrctFrm(:,18)=2-(APFU(:,12)+APFU(:,13)); % OH (A)
+StrctFrm(:,18)=APFU(:,14); % OH (A)
 
 %% Endmembers
 
@@ -747,10 +782,11 @@ if strcmp(wantstrctfrm, 'y')
             
         end
     end
+end
     
 all=[StrctFrm DiOct_Endmembers TriOct_Endmembers];
 StrctFrm=array2table(all,'VariableNames',{'Si_T','Al_T','Sum_T','Al_M','Ti_M','Cr_M','Fe_M','Mn_M','Mg_M','M_Sum','Ca_I','Na_I','K_I','Ba_I','Total_Cations','F_A','Cl_A','OH_A','XAlcel','XFeAlcel','Xprl','Xmrg','Xpg','Xms','XTriOct','Xphl','Xann','Xeas','Xsid','XDiOct'});
-APFU=array2table(APFU,'VariableNames',{'Si','Ti','Al','Cr','Fe','Mn','Mg','Ca','Na','K','Ba','F','Cl','Sum'});
+APFU=array2table(APFU,'VariableNames',{'Si','Ti','Al','Cr','Fe','Mn','Mg','Ca','Na','K','Ba','F','Cl','OH','Sum'});
 
 end
 
