@@ -15,24 +15,46 @@ headers=T.Properties.VariableNames; %saves a list of the oxides in the header
 prompt2='What mineral formula do you want to recalculate?:';
 disp('Options are (CASE SENSITIVE): garnet, pyroxene, olivine, amphibole,')
 disp('feldspar, mica, staurolite, cordierite, chlorite, chloritoid,')
-disp('talc, epidote, titanite, oxyspinel, and sulfide.')
+disp('talc, epidote, titanite, oxyspinel, ilmenite, apatite, and sulfide.')
 wantformula = input(prompt2, 's');
 
 %garnet 
 if strcmp(wantformula, 'garnet')
     prompt3='Calculate Fe3+ from stoichiometry? (y|n):'; %asks if you want the ferric iron calculation
     wantferric=input(prompt3, 's');
+
     %if you do not want ferric iron, the following procedure occurs 
     if strcmp(wantferric, 'y') 
-        prompt4='Do you want cation assignment and endmember calculations? (y|n):';
-        wantstrctfrm=input(prompt4, 's');
-        if strcmp(wantstrctfrm, 'y')
-            StrctFrm=garnet_fe3(data,headers,wantstrctfrm); %calls garnet (w/Fe3+) calculation function, outputs the structural formula with cation assignment
-            disp('Mineral formula and endmembers was output.')
-        else 
-            [~,APFU]=garnet_fe3(data,headers,wantstrctfrm); %calls the garnet (w/Fe3+) calculation, but only outputs APFU and no endmembers
-            disp('The calculated APFU was output without cation assignment.')
+        prompt4='Is the garnet grossular-andradite series? (y|n):';
+        wantgrsand=input(prompt4, 's');
+
+        if strcmp(wantgrsand, 'y')
+            %Fe3+ calculation for ugrandite garnets
+
+            prompt5='Do you want cation assignment and endmember calculations? (y|n):';
+            wantstrctfrm=input(prompt5, 's');
+            if strcmp(wantstrctfrm, 'y')
+                StrctFrm=garnet_skarn(data,headers,wantstrctfrm); %calls garnet (w/Fe3+) calculation function, outputs the structural formula with cation assignment
+                disp('Mineral formula and endmembers was output.')
+            else
+                [~,APFU]=garnet_skarn(data,headers,wantstrctfrm); %calls the garnet (w/Fe3+) calculation, but only outputs APFU and no endmembers
+                disp('The calculated APFU was output without cation assignment.')
+            end
+
+        else
+            %Fe3+ calculation for pyralspite garnets
+            prompt5='Do you want cation assignment and endmember calculations? (y|n):';
+            wantstrctfrm=input(prompt5, 's');
+            if strcmp(wantstrctfrm, 'y')
+                StrctFrm=garnet_fe3(data,headers,wantstrctfrm); %calls garnet (w/Fe3+) calculation function, outputs the structural formula with cation assignment
+                disp('Mineral formula and endmembers was output.')
+            else
+                [~,APFU]=garnet_fe3(data,headers,wantstrctfrm); %calls the garnet (w/Fe3+) calculation, but only outputs APFU and no endmembers
+                disp('The calculated APFU was output without cation assignment.')
+            end
         end
+
+
     else
         %If an FeO only calculation was selected, the following procedure
         %occurs 
@@ -46,6 +68,7 @@ if strcmp(wantformula, 'garnet')
             disp('The calculated APFU was output without cation assignment.')
         end           
     end 
+
     %prompts you to save the output
     prompt5='Do you wish to save the recalculated data? (y|n):';
     save=input(prompt5,'s');
@@ -384,7 +407,7 @@ end
 %staurolite
 if strcmp(wantformula, 'staurolite')
 
-    [APFU]=staurolite(data,headers); %saves only APFU
+    APFU=staurolite(data,headers); %saves only APFU
     disp('The calculated APFU was output without cation assignment.')
     
     %prompts you to save the output
@@ -444,4 +467,41 @@ if strcmp(wantformula,'sulfide')
     if strcmp(save,'y')
         writetable(APFU,strcat(PathName,FileName(1:size(FileName,2)-4),'_structuralformula.txt'),'Delimiter','\t');
     end
+end
+
+%ilmenite
+if strcmp(wantformula, 'ilmenite')
+    APFU=ilmenite_fe3(data,headers); %calls ilmenite calculation
+    
+    %prompts you to save the output
+    prompt5='Do you wish to save the recalculated data? (y|n):';
+    save=input(prompt5,'s');
+    if strcmp(save,'y')
+        writetable(APFU,strcat(PathName,FileName(1:size(FileName,2)-4),'_structuralformula.txt'),'Delimiter','\t');
+    end
+end
+
+%apatite
+if strcmp(wantformula, 'apatite')
+    prompt4='Do you want cation assignment? (y|n):';
+    wantstrctfrm=input(prompt4, 's');
+    if strcmp(wantstrctfrm, 'y')
+        [StrctFrm,~]=apatite(data,headers,wantstrctfrm); %outputs the structural formula with cation assignment
+        disp('Mineral formula and endmembers was output.')
+    else
+        [~,APFU]=apatite(data,headers,wantstrctfrm); %saves only APFU
+        disp('The calculated APFU was output without cation assignment.')
+    end
+    
+    %prompts you to save the output
+    prompt5='Do you wish to save the recalculated data? (y|n):';
+    save=input(prompt5,'s');
+    if strcmp(save,'y')
+        if strcmp(wantstrctfrm, 'y') %if the structural formula option was chosen, a text file for the structural formula is saved
+            writetable(StrctFrm,strcat(PathName,FileName(1:size(FileName,2)-4),'_structuralformula.txt'),'Delimiter','\t');
+        else %if the APFU only was selected, then the APFU output is chosen
+            writetable(APFU,strcat(PathName,FileName(1:size(FileName,2)-4),'_APFU.txt'),'Delimiter','\t');
+        end
+    end
+        
 end
