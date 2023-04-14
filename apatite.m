@@ -330,8 +330,8 @@ StrctFrm(:,22)=APFU(:,18); %S2-
 StrctFrm(:,23)=sum(StrctFrm(:,18:22),2); %anion sum
 
 %variables for the ternary plot
-OH = (APFU(:,21) + APFU(:,17) + APFU(:,18))./StrctFrm(:,22); %OH + S 
-F = APFU(:,19)./StrctFrm(:,22); %F
+OH = (APFU(:,21) + APFU(:,17) + APFU(:,18))./StrctFrm(:,23); %OH + S 
+F = APFU(:,19)./StrctFrm(:,23); %F
 
 StrctFrm=array2table(StrctFrm,'VariableNames',{'P_T','Si_T','S6_T','S4_T','Ti_M','Al_M','Fe_M' ...
     ,'Mn_M','Mg_M','Ca_M','Ba_M','Sr_M','K_M','Na_M','Ce_M','La_M','Cation_Sum','OH_Z', ...
