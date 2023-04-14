@@ -307,32 +307,33 @@ StrctFrm(:,3)=APFU(:,15); %S6+ (T)
 StrctFrm(:,4)=APFU(:,16); %S4+ (T)
 
 %M sites
-StrctFrm(:,5)=APFU(:,4); %Al (M)
-StrctFrm(:,6)=APFU(:,5); %Fe (M)
-StrctFrm(:,7)=APFU(:,6); %Mn (M)
-StrctFrm(:,8)=APFU(:,7); %Mg (M)
-StrctFrm(:,9)=APFU(:,8); %Ca (M)
-StrctFrm(:,10)=APFU(:,9); %Ba (M)
-StrctFrm(:,11)=APFU(:,10); %Sr (M)
-StrctFrm(:,12)=APFU(:,11); %K (M)
-StrctFrm(:,13)=APFU(:,12); %Na (M)
-StrctFrm(:,14)=APFU(:,13); %Ce (M)
-StrctFrm(:,15)=APFU(:,14); %La (M)
-StrctFrm(:,16)=sum(StrctFrm(:,1:15),2); %cation sum
+StrctFrm(:,5)=APFU(:,3); %Ti (M)
+StrctFrm(:,6)=APFU(:,4); %Al (M)
+StrctFrm(:,7)=APFU(:,5); %Fe (M)
+StrctFrm(:,8)=APFU(:,6); %Mn (M)
+StrctFrm(:,9)=APFU(:,7); %Mg (M)
+StrctFrm(:,10)=APFU(:,8); %Ca (M)
+StrctFrm(:,11)=APFU(:,9); %Ba (M)
+StrctFrm(:,12)=APFU(:,10); %Sr (M)
+StrctFrm(:,13)=APFU(:,11); %K (M)
+StrctFrm(:,14)=APFU(:,12); %Na (M)
+StrctFrm(:,15)=APFU(:,13); %Ce (M)
+StrctFrm(:,16)=APFU(:,14); %La (M)
+StrctFrm(:,17)=sum(StrctFrm(:,1:16),2); %cation sum
 
 %Z site
-StrctFrm(:,17)=APFU(:,21); %OH
-StrctFrm(:,18)=APFU(:,19); %F
-StrctFrm(:,19)=APFU(:,20); %Cl
-StrctFrm(:,20)=APFU(:,17); %S1-
-StrctFrm(:,21)=APFU(:,18); %S2-
-StrctFrm(:,22)=sum(StrctFrm(:,17:21),2); %anion sum
+StrctFrm(:,18)=APFU(:,21); %OH
+StrctFrm(:,19)=APFU(:,19); %F
+StrctFrm(:,20)=APFU(:,20); %Cl
+StrctFrm(:,21)=APFU(:,17); %S1-
+StrctFrm(:,22)=APFU(:,18); %S2-
+StrctFrm(:,23)=sum(StrctFrm(:,18:22),2); %anion sum
 
 %variables for the ternary plot
 OH = (APFU(:,21) + APFU(:,17) + APFU(:,18))./StrctFrm(:,22); %OH + S 
 F = APFU(:,19)./StrctFrm(:,22); %F
 
-StrctFrm=array2table(StrctFrm,'VariableNames',{'P_T','Si_T','S6_T','S4_T','Al_M','Fe_M' ...
+StrctFrm=array2table(StrctFrm,'VariableNames',{'P_T','Si_T','S6_T','S4_T','Ti_M','Al_M','Fe_M' ...
     ,'Mn_M','Mg_M','Ca_M','Ba_M','Sr_M','K_M','Na_M','Ce_M','La_M','Cation_Sum','OH_Z', ...
     'F_Z','Cl_Z','S1-_Z','S2-_Z','Anion Sum'});
 
